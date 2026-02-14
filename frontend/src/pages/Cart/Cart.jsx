@@ -5,60 +5,84 @@ import { CartData } from '../../assets/assets'
 
 const Cart = () => {
   return (
+    <>
     <div className="cart-container">
       <div className="cart-back-btn">
          <Link to="/products"><button>Shop</button></Link> 
         </div>
 
-      <hr />
       <div className="cart-header">
         <h2>Shopping Cart</h2>
       </div>
       <hr/>
+     {/*Cart Top*/}
+      <div className="cart-top">
+        <div className="cart-top-left">
+          <p>product</p>
+        </div>
 
-      <div className="cart-sub-header">
-        <h3>Product</h3>
-        <div className="sub-header-header">
-          <h2>Quantity</h2>
-          <h2>Subtotal</h2>
+        <div className="cart-top-right">
+          <div className="cart-top-right-item">
+           <p>Quantity</p>
+          </div>
+
+          <div className="cart-top-right-item">
+           <p>Subtotal</p>
+          </div>
+
         </div>
       </div>
-      <hr />
+      <hr/>
 
-      <div className="cart-data-container">
-        {
-          CartData.map((item,index)=>(
-            <div key={index} className="cart-data">
-
-              <div className="cart-row">
-              <div className="cart-col">
+      {/*Cart Center*/}
+      {
+        CartData.map((item,index)=>(
+          <>
+          <div key={index} className="cart-center">
+            <div className="cart-center-left">
+              <div className="cart-center-left-left">
                 <img src={item.image} alt="" />
-              
-                <div className="cart-col-1">
-                  <h3>{item.name}</h3>
-                  <p>kes {item.price}</p>
-                  <small>Delivery CBD: 100</small><br/>
-
-                  <button>Remove</button>
-                </div>
-
-                <div className="cart-buttons">
-                  <p>+</p>
-                  <p>3</p>
-                  <p>-</p>
-                </div>
-                <div className="cart-subtotal">
-                 <p>kes {item.price}</p> 
-                </div>
-
-                </div>
               </div>
-              <hr />
+              <div className="cart-center-left-right">
+                <p>{item.name}</p>
+                <p>CBD Delivery~100</p>
+                <p>kes {item.price}</p>
+                <button>remove</button>
+              </div>
+
+            </div>
+             
+
+            <div className="cart-center-right">
+
+              <div className="cart-center-right-left">
+                <div className="cart-center-add">
+                <p>+</p>
+              </div>
+              <div className="cart-center-quantity">
+                <p>5</p>
+              </div>
+              <div className="cart-center-reduce">
+                <p>-</p>
+              </div>
+              </div>
+
+              <div className="cart-center-right-right">
+                <p>kes {item.price}</p>
+              </div>
+              
             </div>
             
-          ))
-        }
-      </div>
+
+          </div>
+          <hr />
+          </>
+         
+          
+        ))
+      }
+
+     
 
       <div className="cart-footer">
         <div className="cart-left">
@@ -72,6 +96,7 @@ const Cart = () => {
 
 
     </div>
+    </>
   )
 }
 

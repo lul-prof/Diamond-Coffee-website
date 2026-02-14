@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { assets } from '../../assets/assets.js'
 import './Navbar.css'
 import SideMenu from '../SideMenu/SideMenu.jsx'
@@ -8,6 +8,7 @@ import Register from '../../pages/Register/Register.jsx';
 
 const Navbar = () => {
   const navigate=useNavigate();
+  const [clicked,setClicked]=useState(false);
   const scrollToSection = (id) => {
       document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
   }
@@ -34,14 +35,14 @@ const Navbar = () => {
 
           <div className="nav-user-icon">
             {/*onClick={()=>(document.getElementById("user-hover").style.display="flex")}*/}
-           <img src={assets.UserIcon} onClick={()=>navigate("/register")} alt="" />
+           <img onClick={()=>(setClicked(!clicked),clicked?document.getElementById("user-hover").style.display="flex":document.getElementById("user-hover").style.display="none")}  src={assets.UserIcon} alt="" />
             <div className="user-hover" id='user-hover'>
               <nav>
               <ul>
                 <li>Dashboard</li>
-                <li>Products</li>
+                <li>My Chats</li>
                 <li>My orders</li>
-                <li>Logout</li>
+                <li onClick={()=>(navigate("/register"),setClicked(!clicked))}>Register</li>
               </ul>
             </nav>
             </div>
@@ -51,24 +52,24 @@ const Navbar = () => {
           <Link to='/cart'><img src={assets.CartIcon} alt="" /></Link>
           </div>
 
-          <div className="nav-side-menu">
-            <img src={assets.MenuIcon} alt="" />
-            <div className="nav-sidemenu">
+          <div className="nav-side-menu" id='nav-side-menu'>
+            <img onClick={()=>(document.getElementById("nav-sidemenu").style.display="flex")} src={assets.MenuIcon} alt="" />
+            <div className="nav-sidemenu" id='nav-sidemenu'>
                     <nav>
                         <ul>
-                            <li>Home</li>
+                            <li onClick={() => scrollToSection("home") || navigate('/')}>Home</li>
                             <hr />
-                            <li>Blog</li>
+                            <li onClick={() => scrollToSection("blog") || navigate('/')}>Blog</li>
                             <hr />
-                            <li>Products</li>
+                            <li onClick={() => navigate('/products')}>Products</li>
                             <hr />
-                            <li>About Us</li>
+                            <li onClick={() => scrollToSection("about") || navigate('/')}>About Us</li>
                             <hr />
-                            <li>Testimonials</li>
+                            <li onClick={() => scrollToSection("testimonials") || navigate('/')}>Testimonials</li>
                             <hr />
-                            <li>Contact Us</li>
+                            <li onClick={() => navigate('/contacts')}>Contact Us</li>
                             <hr />
-                            <img src={assets.CloseIcon} alt="" />
+                            <img onClick={()=>(document.getElementById("nav-sidemenu").style.display="none")} src={assets.CloseIcon} alt="" />
                         </ul>
                     </nav>
                 </div>
