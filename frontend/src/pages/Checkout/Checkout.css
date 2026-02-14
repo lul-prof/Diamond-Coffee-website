@@ -1,0 +1,159 @@
+.checkout-container{
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.checkout-left{
+    flex: 1;
+}
+
+.checkout-left .checkout-left-header{
+    margin-left: 20px;
+}
+
+.checkout-left form{
+    color: black;
+
+}
+.checkout-left form input{
+    width: 100%;
+
+}
+
+.checkout-left form textarea{
+    width: 100%;
+}
+
+.checkout-right{
+    flex: 1;
+}
+.checkout-right-details{
+    border: 1px solid black;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.checkout-right hr{
+    margin: 10px 0px;
+    border: 1px solid black;
+}
+
+.checkout-right-details .checkout-detail-1{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.checkout-right-details .checkout-detail-2{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.checkout-right-details .checkout-detail-3{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.checkout-right-details .checkout-detail-4{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.checkout-right .payment-option{
+    width: 100%;
+}
+.payment-option .mpesa-div{
+    display: flex;
+
+}
+.payment-option .paypal-div{
+    display: flex;
+}
+.mpesa-div .mpesa-box{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-top: 5px;
+    border: 1px solid black;
+}
+.mpesa-div .mpesa-box:hover{
+    cursor: pointer;
+}
+
+.paypal-div .paypal-box{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-top: 5px;
+    border: 1px solid black;
+}
+.paypal-div .paypal-box:hover{
+    cursor: pointer;
+}
+
+.mpesa-popup{
+    background-color: rgb(177, 172, 172);
+    padding: 20px;
+    border-radius: 10px;
+}
+.mpesa-popup img{
+    max-width: 50px;
+}
+.mpesa-mini-popup{
+    background-color: gray;
+    padding: 10px;
+    border-radius: 5px;
+}
+.mpesa-mini-popup input{
+    width: 100%;
+    padding: 10px 30px;
+    border-radius: 10px;
+    outline: 0;
+    border: 0;
+}
+
+.mpesa-btn{
+    width: 100%;
+}
+.mpesa-btn button{
+    width: 100%;
+    margin: 20px 0px;
+    padding: 10px 30px;
+    background-color: green;
+    outline: 0;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+}
+
+.mpesa-btn button:hover{
+    cursor: pointer;
+}
+
+.paypal-popup{
+    width: 100%;
+}
+.paypal-popup button{
+    width: 100%;
+    padding: 10px 30px;
+    outline: 0;
+    border: 0;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    margin: 20px 0px;
+}
+.paypal-popup button:hover{
+    cursor: pointer;
+}
+
+@media (max-width:650px) and (min-width:50px) {
+.checkout-container{
+    flex-direction: column;
+}
+}

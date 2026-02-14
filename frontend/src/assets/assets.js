@@ -50,6 +50,7 @@ import Product9 from './carrier.png'
 import Product10 from './Diamond Coffee.png'
 import Product11 from './mug.png'
 import Product12 from './Kraft_Box_with_Coffee_Beans_Mockup-removebg-preview.png'
+import MpesaIcon from './mpesa.png'
 
 
 
@@ -103,6 +104,7 @@ export const assets = {
     Product10,
     Product11,
     Product12,
+    MpesaIcon
 }
 
 export const sliderImages={
@@ -117,6 +119,27 @@ export const dividerImages={
     HistoryImage1,
     HistoryImage2
 }
+
+export const CartData=[
+    {
+        _id: "product1",
+        name: "Instant Coffee 800mg",
+        description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        price: 850,
+        image: [Product1],
+        date: 1716634345448,
+        bestseller: false
+    },
+    {
+        _id: "product2",
+        name: "Instant Coffee 350mg",
+        description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        price: 410,
+        image: [Product2],
+        date: 1716634345448,
+        bestseller: true
+    },
+]
 
 
 export const BlogStories=[

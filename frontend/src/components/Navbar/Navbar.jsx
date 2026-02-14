@@ -48,8 +48,7 @@ const Navbar = () => {
           </div>
 
           <div className="nav-cart-icon">
-            <img src={assets.CartIcon} alt="" />
-            
+          <Link to='/cart'><img src={assets.CartIcon} alt="" /></Link>
           </div>
 
           <div className="nav-side-menu">

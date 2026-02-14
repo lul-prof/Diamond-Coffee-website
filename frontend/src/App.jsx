@@ -14,6 +14,8 @@ import L from 'leaflet';
 import icon from 'leaflet/dist/images/marker-icon.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 import ProgressBar from './components/ProgressBar/ProgressBar'
+import Cart from './pages/Cart/Cart'
+import Checkout from './pages/Checkout/Checkout'
 
 let DefaultIcon = L.icon({
     iconUrl: icon,
@@ -35,6 +37,8 @@ function App() {
       <Route path='/products' element={<Products/>} />
       <Route path='/product/:id' element={<SingleProduct/>} />
       <Route path='/blog/:id' element={<SingleBlog/>}/>
+      <Route path='/cart' element={<Cart/>}/>
+      <Route path='/checkout' element={<Checkout/>}  />
     </Routes>
     <Footer/>
     </BrowserRouter>
