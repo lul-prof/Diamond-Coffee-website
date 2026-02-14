@@ -1,0 +1,42 @@
+.product-container{
+    border: 1px solid burlywood;
+    max-width: 100%;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    align-items: center;
+    justify-items: center;
+}
+.product-container .product-image{
+    max-width: 100%;
+}
+
+.product-container .product-btn button{
+    width: 100%;
+    padding: 5px 90px;
+    background-color: #6F4E37;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    outline: 0;
+    border: 0;
+    color: white
+}
+
+.product-container .product-btn button:hover{
+    width: 100%;
+    padding: 10px 70px;
+    transition: 0.5s ease;
+    cursor: pointer;
+    background-color: #6F4E37;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    outline: 0;
+    border: 0;
+    color: white
+}
+.product-price{
+    font-weight: 700;
+    margin-top: 10px;
+}

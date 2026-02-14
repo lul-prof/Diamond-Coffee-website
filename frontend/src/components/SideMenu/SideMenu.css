@@ -1,0 +1,35 @@
+.sidemenu{
+    background-color: #6F4E37;
+    display: none;
+    max-width: fit-content;
+    padding: 30px;
+    position:relative;
+    left: 88%;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.sidemenu nav ul{
+    list-style: none;
+    font-size: 20px;
+    color: white;
+}
+
+.sidemenu nav ul li{
+    margin: 10px 0px;
+}
+
+.sidemenu nav ul li:hover{
+    cursor: pointer;
+}
+.sidemenu nav ul img{
+    max-width: 30px;
+    position: relative;
+    left: 40%;
+    margin-top: 20px;
+}
+.sidemenu nav ul img:hover{
+    cursor: pointer;
+    transform: rotate(360deg);
+    transition: 1s ease;
+}

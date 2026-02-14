@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300..900&display=swap');
+
+.products-container{
+    max-width: 100%;
+}
+.est-container{
+ margin-left: 30px;
+ color:#6F4E37;
+}
+
+.est-container::after{
+    content: "----";
+    font-weight: bold;
+}
+ .est-container::before{
+    content: "-----";
+    font-weight: bold;
+ }
+.product-image{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.product-image img{
+    width: 100%;
+    justify-self: center;
+}
+.products-header{
+    margin-left: 20px;
+}
+.products-header h2{
+    font-weight: bolder;
+    color: #6F4E37;
+    margin-bottom: 5px;
+    font-size: 100px;
+}
+.products-header h3{
+    font-family: "Sansita Swashed", system-ui;
+    font-optical-sizing: auto;
+    margin-bottom: 5px;
+    font-size: 100px;
+}
+.products-header p{
+    font-size: 50px;
+    margin-bottom: 5px;
+}
+
+.products-category{
+    display: flex;
+    background-color: wheat;
+    gap: 2rem;
+    width: 100%;
+    padding: 10px;
+}
+.products-category .all-products{
+    margin-left: 20px;
+}
+
+.products-category .all-products:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.products-category .product-1:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.products-category .product-2:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.products-category .product-3:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.products-products-container{
+    max-width: 100%;
+   
+}
+.products-products-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.products-products-container .prod-container{
+    max-width:100% ;
+
+}
+
+.products-footer{
+    display: flex;
+    justify-self: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/*Mobile responsive*/
+
+@media (max-width: 1140px) and (min-width: 467px) {
+.product-image img{
+    width: 100%;
+    justify-self: center;
+}
+.products-header{
+    margin-left: 20px;
+}
+.products-header h2{
+    margin-bottom: 0px;
+    font-size: 80px;
+}
+.products-header h3{
+    font-size: clamp(1rem, 4vw + 1rem, 4rem);
+}
+.products-header p{
+    font-size: clamp(1rem, 4vw + 1rem, 2rem);
+}
+.products-category{
+    display: flex;
+    background-color: wheat;
+    gap: 1rem;
+    width: 100%;
+    font-size: clamp(1rem, 2vw + 1rem, 2rem);
+    margin: 0px 10px;
+    padding: 20px;
+}
+.products-category .all-products{
+    margin-left: 5px;
+}
+
+.products-products-container{
+    grid-template-columns: 1fr 1fr;
+}
+
+}
+
+@media (max-width: 466px) and (min-width: 100px) {
+.product-image img{
+    width: 100%;
+    justify-self: center;
+}
+.products-header{
+    margin-left: 20px;
+}
+.products-header h2{
+    margin-bottom: 0px;
+    font-size: 40px;
+}
+.products-header h3{
+    font-size: clamp(1rem, 4vw + 1rem, 2rem);
+}
+.products-header p{
+    font-size: clamp(0.2rem, 3.5vw + 1rem, 3rem);
+}
+.products-category{
+    display: flex;
+    background-color: wheat;
+    gap: 1rem;
+    width: 100%;
+    font-size: clamp(0.2rem, 2vw + 0.5rem, 1rem);
+    margin: 0px 10px;
+    padding: 20px;
+}
+.products-category .all-products{
+    margin-left: 5px;
+}
+
+.products-products-container{
+    grid-template-columns: 1fr;
+}
+
+}

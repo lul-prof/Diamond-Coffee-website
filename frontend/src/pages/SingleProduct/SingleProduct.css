@@ -1,0 +1,117 @@
+.single-product-container{
+    max-width: 100%;
+}
+
+.product-nav{
+    margin-left: 20px;
+}
+
+.product-nav p b{
+    color: #6F4E37;
+    margin: 5px;
+}
+
+.product-nav p i{
+    color: #6F4E37;
+    margin: 5px;
+}
+
+.product-nav b::after{
+    content: ">>";  
+}
+
+.single-product-details{
+    border: 1px solid burlywood;
+    margin: 20px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.single-product-details .single-product-image{
+    max-width: 100%;
+    justify-self: center;
+    align-self: center;
+}
+
+.single-product-details .single-product-image img{
+    max-width: 90%;
+}
+
+hr{
+    border:2px solid #6F4E37;
+    margin: 0px 20px;
+}
+.single-product-name{
+    color: #6F4E37;
+    font-weight: 800;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.single-product-details-detail{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-left: 20px;
+    padding: 10px;
+}
+
+.single-product-details-detail input{
+    padding: 10px 10px;
+}
+.single-product-details-detail .cart{
+    background-color: #6F4E37;
+    padding: 10px 30px;
+    outline: 0;
+    border: 0;
+    border-radius: 5px;
+}
+.single-product-details-detail .buy{
+    background-color: white;
+    border: 2px solid burlywood;
+    padding: 10px 30px;
+    outline: 0;
+    border-radius: 5px;
+}
+
+.single-product-details-detail .cart:hover{
+    background-color: white;
+    cursor: pointer;
+    border: 2px solid burlywood;
+}
+
+.single-product-details-detail .buy:hover{
+    background-color: #6F4E37;
+    border: 0;
+    cursor: pointer;
+}
+.single-product-description{
+    margin-left: 20px; 
+    max-width: 97%;
+    margin-bottom: 10px;
+}
+.single-product-description h1{
+    color: #6F4E37;
+    font-weight: 700;
+}
+
+.best-seller h2{
+    margin-left: 20px;
+    color: #6F4E37;
+    font-weight: 700;
+}
+
+.bestseller-product{
+    max-width: 100%;
+    display:grid ;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width:840px) and ((min-width:100px)) {
+  .bestseller-product{
+    max-width: 100%;
+    display:grid ;
+    grid-template-columns: 1fr;
+}
+  
+}

@@ -1,0 +1,5 @@
+.leaflet-container {
+    width: 90%;
+    height: 50vh;
+    z-index: 0;
+}

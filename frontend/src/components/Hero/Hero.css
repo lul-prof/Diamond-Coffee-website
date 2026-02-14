@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300..900&display=swap');
+
+.hero-container{
+    justify-self: left;
+    margin-left: 20px;
+    overflow: hidden;
+}
+.hero-container .hero-slider{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 4rem;
+    overflow: hidden;
+}
+.hero-container .hero-slider .hero-text{
+    justify-self: center;
+    align-self: center;
+}
+.hero-container .hero-slider .hero-text h1 {
+    font-family: "Sansita Swashed", system-ui;
+    font-optical-sizing: auto;
+    font-size: 100px;
+}
+
+.hero-container .hero-slider .hero-text h2 {
+    font-family: "Sansita Swashed", system-ui;
+    font-optical-sizing: auto;
+    font-size: 90px;
+}
+
+.hero-container .hero-slider .hero-text p {
+    font-family: "Sansita Swashed", system-ui;
+    font-optical-sizing: auto;
+    font-size: 100px;
+}
+
+.hero-container .hero-slider .hero-text p{
+    animation: FadeAwayText 1s ease;
+}
+
+.hero-container .hero-slider .hero-slider-images img{
+    border-radius: 20px;
+    max-width: 700px;
+    animation: FadeAway 3s ease;
+}
+.hero-text{
+    font-family: "Syne Mono", monospace; 
+}
+
+.hero-buttons{
+    display:none;
+}
+
+.hero-container .hero-slider .hero-buttons .hero-back  img{
+    width: 50px;
+    position:relative;
+    top:-250px;
+
+}
+
+.hero-container .hero-slider .hero-buttons .hero-next img{
+    width: 50px;
+    position: relative;
+    left:700px;
+    top: -250px;
+    
+}
+
+.hero-text-btn button{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 1px solid white;
+    background: burlywood;
+}
+.hero-text-btn button:hover{
+    cursor: pointer;
+    background-color: #6F4E37;
+    color: white;
+    border: 1px solid white;
+    transition: 0.5s ease;
+}
+@keyframes FadeAway{
+    0%{
+        opacity: 0;
+
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes FadeAwayText{
+    0%{
+        font-size: 20px;
+
+    }
+    25%{
+        font-size: 40px;
+    }
+    50%{
+        font-size: 60px;
+    }
+    75%{
+    font-size: 80px;
+    }
+    100%{
+        font-size: 100px;
+    }
+}
+
+/*Mobile Devices
+/* font-size: clamp([minimum size], [preferred fluid size], [maximum size]); */
+
+@media (max-width:940px) and (min-width:100px) {
+.hero-container{
+    justify-self: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.hero-container .hero-slider{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+.hero-container .hero-slider .hero-text{
+    position: relative;
+    color: white;
+    right: calc(38% - 100px);
+    bottom: 300px;
+}
+.hero-container .hero-slider .hero-text h1 {
+    font-size: clamp(2rem, 8vw + 1rem, 3rem);
+}
+
+.hero-container .hero-slider .hero-text h2 {
+     font-size: clamp(2rem, 5vw + 1rem, 3rem);
+}
+
+.hero-container .hero-slider .hero-text p {
+     font-size: clamp(2rem, 10vw + 1rem, 3rem);
+}
+
+
+.hero-container .hero-slider .hero-slider-images img{
+    border-radius: 20px;
+    max-width: 100%;
+}
+
+
+.hero-text-btn button{
+    width: 100%;
+    margin-top: 10px;
+}
+   
+}
+
+/*Mobile Devices 2*/
+@media (max-width:1304px) and (min-width:941px) {
+
+.hero-container{
+    justify-self: left;
+    margin-left: 20px;
+}
+.hero-container .hero-slider{
+    gap: 0.6rem;
+}
+
+.hero-container .hero-slider .hero-text h1 {
+    font-size: 50px;
+}
+
+.hero-container .hero-slider .hero-text h2 {
+    font-size: 50px;
+}
+
+.hero-container .hero-slider .hero-text p {
+    font-size: 40px;
+}
+
+
+.hero-container .hero-slider .hero-slider-images img{
+    border-radius: 20px;
+    max-width: 700px;
+}
+
+.hero-text-btn button{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+
+}

@@ -1,0 +1,240 @@
+.footer{
+    background-color: #6F4E37;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    max-height: 100%;
+    margin-top: 20px;
+
+}
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+    color: white;
+    height: fit-content;
+}
+.footer-logo{
+    cursor: pointer;
+}
+.footer-container .footer-left h1{
+    font-size: 20px;
+    margin: 20px 0;
+    color: black;
+}
+
+.footer-container .footer-left h4{
+    font-size: 12px;
+    color: whitesmoke;
+}
+
+.footer-container .footer-left .footer-left-link h4 a{
+    text-decoration: none;
+    color: white;
+}
+.footer-container .footer-left .footer-left-link h4 a:hover{
+    text-decoration: underline;
+    font-style: italic;
+}
+.footer-container .footer-left .footer-logo img{
+    max-width: 300px;
+}
+
+.footer-container .footer-center{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.footer-center ul{
+    list-style: none;
+    justify-self: center;
+    justify-content: center;
+}
+.footer-center ul li{
+    margin: 10px 0px;
+    font-size: 22px;
+}
+
+.footer-center ul li:hover{
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.5ms ease-in;
+
+}
+
+.footer-center h1{
+    text-decoration: underline;
+    margin-bottom: 10PX;
+}
+
+
+.footer-right h1{
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+.footer-right .footer-right-social-links{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+.footer-right .footer-right-social-links img{
+    max-width: 30px;
+}
+
+.footer-right .footer-right-social-links img:hover{
+    cursor: pointer;
+    animation: CircleRound 1s ease;
+}
+
+.footer-right .footer-right-contacts{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-right-newsletter form input[type=email]{
+    background: transparent;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 3px;
+    width: 240px;
+    padding: 5px;
+    margin-bottom: 10px;
+} 
+
+.footer-right-newsletter form input[type=email]::placeholder{
+    color: white;
+}
+
+.footer-right-newsletter hr{
+    margin-bottom: 10px;
+    border:1px solid white;
+    
+}
+
+.footer-right-newsletter form input[type=submit]{
+   width: 240px;
+   padding: 4px;
+   background-color: black;
+   color: white;
+   border: 0;
+}
+
+.footer-copyright{
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 2px;
+    color: white;
+}
+
+@keyframes CircleRound {
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform:rotateY(360deg);
+    }
+}
+
+@media (max-width: 800px) and (min-width: 100px) {
+.footer{
+    justify-content: center;
+    max-height: 100%;
+    margin-top: 20px;
+}
+    .footer-container{
+    flex-direction: column;
+    padding: 10px;
+}
+.footer-container .footer-left h1{
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.footer-container .footer-left h4{
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.footer-container .footer-left .footer-logo img{
+    max-width: 42%;
+}
+
+.footer-container .footer-center{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-center ul{
+    list-style: none;
+    justify-self: left;
+    justify-content: left;
+    margin-bottom: 20px;
+}
+.footer-center ul li{
+    margin: 20px 0px;
+    font-size: 22px;
+}
+
+.footer-center h1{
+    text-decoration: underline;
+    margin-bottom: 10PX;
+}
+
+
+.footer-right h1{
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+.footer-right .footer-right-social-links{
+    gap: 1rem;
+    justify-content: flex-start;
+}
+.footer-right .footer-right-social-links img{
+    max-width: 30px;
+}
+
+.footer-right .footer-right-contacts{
+    gap: 1rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-right-newsletter form input[type=email]{
+    background: transparent;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 3px;
+    width: 240px;
+    padding: 5px;
+    margin-bottom: 10px;
+} 
+
+.footer-right-newsletter hr{
+    margin-bottom: 10px;
+    border:1px solid white;
+    max-width:calc(52%);
+    
+}
+
+.footer-copyright{
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 2px;
+    color: white;
+}
+
+.footer-copyright p{
+    font-size:clamp(0.5rem, 2vw + 0.5rem, 0.2rem); ;
+}
+}
