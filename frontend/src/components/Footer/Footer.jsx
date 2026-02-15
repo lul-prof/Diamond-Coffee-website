@@ -4,6 +4,7 @@ import { assets } from '../../assets/assets'
 import { useNavigate } from 'react-router-dom'
 
 const Footer = () => {
+    const admin_url=import.meta.env.VITE_ADMIN_URI; 
     const Year=()=>{
         return new Date().getFullYear()
     }
@@ -38,7 +39,7 @@ const Footer = () => {
                 <li onClick={() => scrollToSection("home")}>Home</li>
                 <li onClick={() => scrollToSection("about")}>About Us</li>
                 <li onClick={()=>navigate('/contact')}>Contact Us</li>
-                <li onClick={()=>navigate('/admin') || ""}>Admin</li>
+                <li onClick={()=>navigate({admin_url}) || ""}>Admin</li>
                 <li onClick={() => scrollToSection("blog")}>Blogs</li>
             </ul>
 

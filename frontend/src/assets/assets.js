@@ -51,12 +51,8 @@ import Product10 from './Diamond Coffee.png'
 import Product11 from './mug.png'
 import Product12 from './Kraft_Box_with_Coffee_Beans_Mockup-removebg-preview.png'
 import MpesaIcon from './mpesa.png'
-
-
-
-
-
-
+import PlusIcon from './add.png'
+import MinusIcon from './minus.png'
 
 
 
@@ -104,7 +100,9 @@ export const assets = {
     Product10,
     Product11,
     Product12,
-    MpesaIcon
+    MpesaIcon,
+    PlusIcon,
+    MinusIcon
 }
 
 export const sliderImages={

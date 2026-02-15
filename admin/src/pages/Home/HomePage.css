@@ -1,0 +1,308 @@
+.home-container{
+    display: flex;
+    gap: 2rem;
+    border: 0;
+    border-top:2px solid black;
+    border-bottom: 1px solid black;
+    margin-top: 10px;
+    overflow-x: auto;
+    height: 100vh;
+}
+::-webkit-scrollbar{
+  background-color: burlywood; 
+}
+::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.home-action-btns{
+    border: 0;
+    border-right:2px solid black;
+    
+}
+.home-action-btns .action-btn-1{
+    margin-top: 10px;
+}
+
+.action-btn{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.action-btn-10{
+    margin-top: 90px;
+    margin-bottom: 10px;
+}
+.action-btn button{
+    padding: 10px 30px;
+    outline: 0;
+    border: 2px solid black;
+    color: white;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.action-btn button:hover{
+    cursor: pointer;
+}
+
+.home-content-tabs{
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+.shop-tab{
+    display: flex;
+    gap: 3rem;
+}
+
+.shop-tab-right h2{
+    text-align: left;
+    text-decoration: underline;
+    margin-bottom: 20px;
+
+}
+
+.form-class-img{
+    display: flex;
+}
+
+form .form-class-img img{
+    max-width: 100px;
+}
+form .form-class-img img:hover{
+    cursor: pointer;
+}
+.form-class{
+    margin: 10px;
+    margin-top: 20px;
+}
+form input{
+    width: 100%;
+    padding: 10px 30px;
+    outline: 0;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+form .form-btn{
+    width: 100%;
+    justify-self: center;
+    margin-top: 20px;
+}
+
+.form-btn button{
+    width: 100%;
+    padding: 10px 30px;
+    background-color: black;
+    color: white;
+    outline: 0;
+    border: 0;
+    border-radius: 5px;
+}
+
+.form-btn button:hover{
+    cursor: pointer;
+}
+
+.shop-tab-left{
+    max-width: 100%;
+}
+.shop-tab-left hr{
+    border: 1px solid burlywood;
+}
+.shop-tab-left h2{
+    text-decoration: underline;
+    margin-bottom: 30px;
+}
+.product-details{
+    width: 100%;
+    display: flex;
+    margin: 20px;
+}
+.product-details .product-image img{
+    max-width: 50px;
+}
+.product-details .product-btn{
+    display: flex;
+}
+.product-btn img{
+    max-width: 20px;
+    max-height: 20px;
+}
+.product-title{
+    align-self: center;
+    margin-left: 20px;
+}
+.product-price{
+    align-self: center;
+    margin-left: 20px;
+}
+.product-btn{
+    align-self: center;
+    margin-left: 20px;
+    gap: 2rem;
+}
+.product-btn img:hover{
+    cursor: pointer;
+}
+
+/*---------Blog----------------*/
+
+.blogs-tab{
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+}
+
+.blog-tab-right{
+    width: 100%;
+}
+.blog-tab-right h2{
+    text-align: left;
+    text-decoration: underline;
+    margin-bottom: 20px;
+
+}
+.blog-tab-right .blog-form .blog-form-class-img img{
+    max-width: 100px;
+}
+.blog-tab-right .blog-form .blog-form-class-img img:hover{
+    cursor: pointer;
+}
+.blog-tab-right .blog-form-class{
+    margin: 10px;
+    margin-top: 20px;
+}
+.blog-tab-right .blog-form .blog-form-class input{
+    width: 250px;
+    outline: 0;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.blog-tab-right .blog-form-btn{
+    width: 100%;
+    justify-self: center;
+    margin-top: 20px;
+}
+
+.blog-form-btn button{
+    width: 100%;
+    padding: 10px 30px;
+    background-color: black;
+    color: white;
+    outline: 0;
+    border: 0;
+    border-radius: 5px;
+}
+
+.blog-form-btn button:hover{
+    cursor: pointer;
+}
+
+.blog-tab-left{
+    width: 100%;
+}
+.blog-tab-left hr{
+    border: 1px solid burlywood;
+}
+.blog-tab-left h2{
+    text-decoration: underline;
+    margin-bottom: 30px;
+}
+.blog-details{
+    width: 100%;
+    display: flex;
+    margin: 20px;
+}
+.blog-details .blog-image img{
+    max-width: 50px;
+}
+.blog-details .blog-btn{
+    display: flex;
+}
+.blog-btn img{
+    max-width: 20px;
+    max-height: 20px;
+}
+.blog-title{
+    align-self: center;
+    margin-left: 20px;
+}
+.blog-price{
+    align-self: center;
+    margin-left: 20px;
+}
+.blog-btn{
+    align-self: center;
+    margin-left: 20px;
+    gap: 2rem;
+}
+.blog-btn img:hover{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+Brass	#E1C16E
+Camel	#C19A6B
+Chocolate	#7B3F00
+Coffee	#6F4E37
+Cinnamon	#D27D2D
+Copper	#B87333
+
+..green
+Lime Green	#32CD32
+Neon Green	#0FFF50
+
+..blue
+Egyptian Blue	#1434A4
+Neon Blue	#1F51FF
+Ultramarine	#0437F2
+Kelly Green	#4CBB17
+
+*/
