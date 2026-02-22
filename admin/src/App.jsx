@@ -2,13 +2,16 @@ import Footer from "./components/Footer/Footer"
 import Header from "./components/Header/Header"
 import Dashboard from "./pages/Dashboard/Dashboard"
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Toaster } from "react-hot-toast";
 
 
 function App() {
   return (
     <>
     <BrowserRouter>
+    
     <Header/>
+    
     <Dashboard/>
 
     <Footer/>

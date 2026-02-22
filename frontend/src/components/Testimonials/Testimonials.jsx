@@ -1,6 +1,7 @@
 import React from "react";
 import "./Testimonials.css";
 import { assets, testimonials } from "../../assets/assets";
+import { Link } from "react-router-dom";
 
 const Testimonials = () => {
   return (
@@ -34,7 +35,7 @@ const Testimonials = () => {
               <img src={assets.TestimonialImage2} alt="" />
 
               <div className="testimonial-btn">
-                <button>write Review</button>
+               <Link to="/review"><button>write Review</button></Link> 
               </div>
             </div>
             

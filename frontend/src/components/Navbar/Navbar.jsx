@@ -1,9 +1,12 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { assets } from '../../assets/assets.js'
 import './Navbar.css'
 import SideMenu from '../SideMenu/SideMenu.jsx'
 import { Link, useNavigate } from 'react-router-dom';
 import Register from '../../pages/Register/Register.jsx';
+import toast from 'react-hot-toast';
+
+
 
 
 const Navbar = () => {
@@ -12,6 +15,10 @@ const Navbar = () => {
   const scrollToSection = (id) => {
       document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
   }
+  const token=localStorage.getItem("token");
+  useEffect(()=>{
+    
+  },[token])
   return (
     <>
     
@@ -42,7 +49,13 @@ const Navbar = () => {
                 <li>Dashboard</li>
                 <li>My Chats</li>
                 <li>My orders</li>
-                <li onClick={()=>(navigate("/register"),setClicked(!clicked))}>Register</li>
+                {
+                  !token
+                  ?
+                  <li onClick={()=>(navigate("/register"),setClicked(!clicked))}>Register</li>
+                  :
+                  <li onClick={()=>(localStorage.removeItem("token"),navigate('/'),toast.success("logged out successfully"))}>Logout</li>
+                }
               </ul>
             </nav>
             </div>

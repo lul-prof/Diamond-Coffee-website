@@ -53,10 +53,24 @@
 
 }
 
+.cart-center-add img{
+    max-width: 20px;
+    cursor: pointer;
+}
+.cart-center-reduce img{
+     max-width: 20px;
+     cursor: pointer;
+}
 .cart-center-right{
     display: flex;
     justify-content: space-between;
     gap: 4rem;
+}
+
+.cart-center-quantity{
+    justify-self: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .cart-center-right-right{

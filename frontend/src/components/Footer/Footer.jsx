@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Footer.css'
 import { assets } from '../../assets/assets'
 import { useNavigate } from 'react-router-dom'
+import axios from 'axios';
+import {toast} from 'react-hot-toast';
 
 const Footer = () => {
     const admin_url=import.meta.env.VITE_ADMIN_URI; 
@@ -14,6 +16,26 @@ const Footer = () => {
     setTimeout(() => {
       document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
     }, 100)
+  }
+
+  const backend_url=import.meta.env.VITE_BACKEND_URI;
+  const [subscriber,setSubscriber]=useState("");
+
+  const handleSubmit=async(e)=>{
+    e.preventDefault();
+    try {
+        const response=await axios.post(`${backend_url}/api/user/subscribe`,{email:subscriber});
+        console.log(response);
+        if(response.data.success){
+            toast.success(response.data.message);
+        }else{
+            toast.error(response.data.message);
+        }
+        
+    } catch (error) {
+        console.log(error);
+        toast.error(error);
+    }
   }
   return (
     <>
@@ -65,8 +87,8 @@ const Footer = () => {
             <div className="footer-right-newsletter">
                 <h2>Subscribe to our mail</h2>
                  <hr />
-                <form action="" method='' className='newsletter-form'>
-                <input type="email" name="email" id="email" placeholder='Enter Your email adrress' />
+                <form method='post' onSubmit={handleSubmit} className='newsletter-form'>
+                <input type="email" name="email" onChange={(e)=>setSubscriber(e.target.value)} value={subscriber} id="email" required placeholder='Enter Your email adrress' />
                 <br />
                 <input type="submit" value="Subscribe" />
                 </form>

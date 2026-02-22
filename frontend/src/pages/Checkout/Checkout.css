@@ -85,6 +85,17 @@
     cursor: pointer;
 }
 
+.payment-option .cod-div{
+    display: flex;
+}
+
+.cod-div .cod-box{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-top: 5px;
+    border: 1px solid black;
+}
 .paypal-div .paypal-box{
     width: 20px;
     height: 20px;
@@ -149,6 +160,24 @@
     margin: 20px 0px;
 }
 .paypal-popup button:hover{
+    cursor: pointer;
+}
+
+
+.cod-popup{
+    width: 100%;
+}
+.cod-popup button{
+    width: 100%;
+    padding: 10px 30px;
+    outline: 0;
+    border: 0;
+    background-color: orangered;
+    color: black;
+    border-radius: 5px;
+    margin: 20px 0px;
+}
+.cod-popup button:hover{
     cursor: pointer;
 }
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import './Cart.css'
 import { Link } from 'react-router-dom'
-import { CartData } from '../../assets/assets'
+import { assets, CartData } from '../../assets/assets'
 
 const Cart = () => {
   return (
@@ -57,14 +57,17 @@ const Cart = () => {
 
               <div className="cart-center-right-left">
                 <div className="cart-center-add">
-                <p>+</p>
+                <img src={assets.PlusIcon} alt="" />
               </div>
+
               <div className="cart-center-quantity">
                 <p>5</p>
               </div>
+
               <div className="cart-center-reduce">
-                <p>-</p>
+                <img src={assets.MinusIcon} alt="" />
               </div>
+              
               </div>
 
               <div className="cart-center-right-right">

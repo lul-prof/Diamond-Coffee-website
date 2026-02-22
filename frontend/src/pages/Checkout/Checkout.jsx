@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
 import './Checkout.css'
 import { assets } from '../../assets/assets';
+import { Link } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 const Checkout = () => {
     const [paypal,setPaypal]=useState(false);
     const [mpesa,setMpesa]=useState(false);
+    const [cod,setCod]=useState(true);
   return (
     <>
     <div className="checkout-container">
@@ -13,7 +16,7 @@ const Checkout = () => {
             <div className="checkout-left-header">
                 <h1>Delivery Details</h1>
             </div>
-            <form className='checkout-form' action="">
+            <form className='checkout-form' method='post'>
                 <div className="form-group">
                     <label>First name</label>
                     <input type="text" name="" id="" />
@@ -82,13 +85,18 @@ const Checkout = () => {
             <div className="payment-option">
                 <h2>Pay with</h2>
                 <div className="mpesa-div">
-                    <div onClick={()=>(setMpesa(!mpesa),setPaypal(false))} style={{backgroundColor:mpesa?"green":""}} className="mpesa-box"></div>
+                    <div onClick={()=>(setMpesa(!mpesa),setPaypal(false),setCod(false))} style={{backgroundColor:mpesa?"green":""}} className="mpesa-box"></div>
                     <h2>Mpesa</h2>
                 </div>
 
                 <div className="paypal-div">
-                    <div onClick={()=>(setPaypal(!paypal),setMpesa(false))} style={{backgroundColor:paypal?"blue":""}} className="paypal-box"></div>
+                    <div onClick={()=>(setPaypal(!paypal),setMpesa(false),setCod(false))} style={{backgroundColor:paypal?"blue":""}} className="paypal-box"></div>
                     <h2>Paypal</h2>
+                </div>
+
+                <div className="cod-div">
+                    <div onClick={()=>(setCod(!cod),setMpesa(false),setPaypal(false))} style={{backgroundColor:cod?"orangered":""}} className="cod-box"></div>
+                    <h2>cash on delivery</h2>
                 </div>
 
                 {
@@ -114,6 +122,14 @@ const Checkout = () => {
 
                 <div className="paypal-popup">
                     <button>Pay With paypal</button>
+                </div>
+                </>
+                :
+                cod?
+                <>
+
+                <div className="cod-popup">
+                  <Link to='/orders' ><button onClick={()=>toast.success("order placed")}>Cash On Delivery</button></Link>  
                 </div>
                 </>
                 :
