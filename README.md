@@ -17,6 +17,15 @@ This project is a complete redesign of the original Diamond Coffee website (http
 
 ---
 
+<img width="2080" height="1500" alt="Blank diagram (2)" src="https://github.com/user-attachments/assets/8452c13a-4b04-4136-8233-3dc07fd3d312" />
+
+<img width="1420" height="1040" alt="Blank diagram (1)" src="https://github.com/user-attachments/assets/08879e74-0df0-4e5d-9713-2c6791f5cc13" />
+<img width="2656" height="1143" alt="Blank diagram" src="https://github.com/user-attachments/assets/b546f228-111d-4e68-ab62-598e25c0e6f3" />
+
+<img width="1260" height="1060" alt="Flowchart" src="https://github.com/user-attachments/assets/99e0e00f-3ee9-4716-bb33-9aafbb66288c" />
+
+[Diamond coffee company designs 1.pdf](https://github.com/user-attachments/files/25516121/Diamond.coffee.company.designs.1.pdf)
+
 # 📌 Features
 
 ---
@@ -290,5 +299,16 @@ This project is proprietary software developed for Diamond Coffee Company Limite
 All rights reserved.
 
 
+<img width="1920" height="1080" alt="Screenshot (71)" src="https://github.com/user-attachments/assets/32311d42-c66a-48c4-a602-9616344a855a" />
+<img width="1920" height="1080" alt="Screenshot (72)" src="https://github.com/user-attachments/assets/e1f18380-6afe-4c2d-b3e1-a68bc888c65b" />
+<img width="1920" height="1080" alt="Screenshot (73)" src="https://github.com/user-attachments/assets/a8f43a48-52ba-4838-b865-64d7ba0400d6" />
+<img width="1920" height="1080" alt="Screenshot (74)" src="https://github.com/user-attachments/assets/87ddb57b-1766-4dee-9e16-109cb3d7fbb3" />
+<img width="1920" height="1080" alt="Screenshot (75)" src="https://github.com/user-attachments/assets/bcb1efd6-8366-45ce-8b55-0be8b71acb60" />
+<img width="1920" height="1080" alt="Screenshot (65)" src="https://github.com/user-attachments/assets/759c267f-c5fd-4466-90ce-6ae929f85b61" />
+<img width="1920" height="1080" alt="Screenshot (66)" src="https://github.com/user-attachments/assets/c1f3ada7-5086-42a8-a044-35c4923e5ff0" />
+<img width="1920" height="1080" alt="Screenshot (67)" src="https://github.com/user-attachments/assets/97aa0e3e-cdd0-412f-9363-e59401ce6001" />
+<img width="1920" height="1080" alt="Screenshot (68)" src="https://github.com/user-attachments/assets/74705a14-7694-435d-a03f-73f6f3a3fcfd" />
+<img width="1920" height="1080" alt="Screenshot (69)" src="https://github.com/user-attachments/assets/b4888472-eca0-43fe-ae7d-a4227d8eee14" />
+<img width="1920" height="1080" alt="Screenshot (70)" src="https://github.com/user-attachments/assets/ecb17a4e-93cf-4b8f-879e-0c5d57ac206f" />
 
 
