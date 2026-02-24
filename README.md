@@ -1,4 +1,4 @@
-# ☕ Diamond Coffee Company Limited
+# Diamond Coffee Company Limited
 
 ### Modern Full-Stack E-Commerce Platform  
 A fully functional e-commerce web application built with **React.js, Node.js, and Express.js**.
@@ -7,7 +7,7 @@ This project is a complete redesign of the original Diamond Coffee website (http
 
 ---
 
-## 🚀 Live Project Goals
+## Live Project Goals
 
 - Modernize the Diamond Coffee digital presence
 - Enable secure online purchases
@@ -21,9 +21,9 @@ This project is a complete redesign of the original Diamond Coffee website (http
 
 ---
 
-## 👤 User Features
+## User Features
 
-### 🔐 Authentication & Authorization
+### Authentication & Authorization
 - Email & password registration
 - Secure login with encrypted passwords (bcrypt)
 - JWT-based authentication
@@ -33,7 +33,7 @@ This project is a complete redesign of the original Diamond Coffee website (http
 
 ---
 
-## 🔎 Product Discovery
+## Product Discovery
 - Advanced keyword search
 - Category-based filtering
 - Dynamic product listings
@@ -46,7 +46,7 @@ This project is a complete redesign of the original Diamond Coffee website (http
 
 ---
 
-## 🛒 Shopping Experience
+## Shopping Experience
 - Add to cart
 - Update cart quantity
 - Remove items from cart
@@ -69,11 +69,11 @@ This project is a complete redesign of the original Diamond Coffee website (http
 
 ---
 
-# 🛠️ Admin Panel Features
+# Admin Panel Features
 
 ---
 
-## 📦 Product Management
+## Product Management
 - View all products
 - Add new products with image upload (Cloudinary)
 - Edit product details
@@ -82,7 +82,7 @@ This project is a complete redesign of the original Diamond Coffee website (http
 
 ---
 
-## 📋 Order Management
+## Order Management
 - View all customer orders
 - Filter by order status
 - Update order status
@@ -91,7 +91,7 @@ This project is a complete redesign of the original Diamond Coffee website (http
 
 ---
 
-## 📊 Analytics Dashboard
+## Analytics Dashboard
 - Total earnings overview
 - Monthly revenue tracking
 - Category-based revenue analysis
@@ -101,7 +101,7 @@ This project is a complete redesign of the original Diamond Coffee website (http
 
 ---
 
-# 🧱 Tech Stack
+# Tech Stack
 
 ## Frontend
 - React.js
@@ -130,7 +130,7 @@ This project is a complete redesign of the original Diamond Coffee website (http
 
 ---
 
-# 📂 Project Structure
+# Project Structure
 diamond-coffee-ecommerce/
 │
 ├── client/ # React Frontend
@@ -157,7 +157,7 @@ diamond-coffee-ecommerce/
 
 ---
 
-# 🔐 Security Measures
+# Security Measures
 
 - Password hashing using bcrypt
 - JWT token authentication
@@ -169,21 +169,21 @@ diamond-coffee-ecommerce/
 
 ---
 
-# 📦 API Endpoints Overview
+# API Endpoints Overview
 
 ## Authentication
 
 
-POST /api/auth/register
-POST /api/auth/login
-GET /api/auth/profile
+POST /api/user/register
+POST /api/user/login
+GET /api/user/profile
 
 
 ## Products
 
 
-GET /api/products
-GET /api/products/:id
+GET /api/user/products
+GET /api/user/products/:id
 POST /api/products (Admin)
 PUT /api/products/:id (Admin)
 DELETE /api/products/:id (Admin)
@@ -192,23 +192,23 @@ DELETE /api/products/:id (Admin)
 ## Orders
 
 
-POST /api/orders
-GET /api/orders/myorders
+POST /api/user/orders
+GET /api/user/orders/myorders
 GET /api/orders (Admin)
 PUT /api/orders/:id/status (Admin)
 
 
 ---
 
-# ⚙️ Installation & Setup
+# Installation & Setup
 
-## 1️⃣ Clone Repository
+## 1. Clone Repository
 
 ```bash
 git clone https://github.com/your-username/diamond-coffee-ecommerce.git
 cd diamond-coffee-ecommerce
 
-2️⃣ Install Dependencies
+2. Install Dependencies
 Backend
 cd server
 npm install
@@ -217,11 +217,11 @@ Frontend
 cd client
 npm install
 
-3️⃣ Configure Environment Variables
+3. Configure Environment Variables
 
 Create a .env file inside /server:
 
-PORT=5000
+PORT=3000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 
@@ -235,7 +235,7 @@ MPESA_CONSUMER_KEY=your_consumer_key
 MPESA_CONSUMER_SECRET=your_consumer_secret
 MPESA_PASSKEY=your_passkey
 
-4️⃣ Run the Application
+4. Run the Application
 Start Backend
 npm run server
 
@@ -249,7 +249,7 @@ Frontend → http://localhost:3000
 
 Backend → http://localhost:5000
 
-📈 Future Improvements
+</> Future Improvements
 
 Wishlist system
 
@@ -267,7 +267,7 @@ Advanced reporting tools
 
 Multi-vendor expansion capability
 
-🎯 Business Impact
+Business Impact
 
 This redesign positions Diamond Coffee Company Limited as:
 
@@ -279,7 +279,7 @@ A secure online payment-enabled business
 
 A modern and professional online presence
 
-👨‍💻 Author
+Author-Israel Mutua
 
 Developed as a full-stack MERN application using modern industry best practices.
 
