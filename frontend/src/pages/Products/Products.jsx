@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./Products.css";
 import { assets } from "../../assets/assets";
 import Product from "../../components/Product/Product";
 import { toast } from 'react-toastify';
 import axios from 'axios'
 import { useEffect } from "react";
+import { ShopContext } from "../../context/ShopContext";
 
 
 const Products = () => {
@@ -12,7 +13,7 @@ const Products = () => {
   const [products,setProducts]=useState([]);
   //const [loading,setLoading]=useState(false);
 
-  const backend_url=import.meta.env.VITE_BACKEND_URI;
+  const {backend_url}=useContext(ShopContext);
 
   
   
@@ -20,23 +21,19 @@ const Products = () => {
       try {
         const resp=await axios.get(`${backend_url}/api/user/search?query=${searched}`);
         if(resp.data.success){
-          console.log(resp.data)
           setProducts(resp.data.results);
         }
         
       } catch (error) {
-        console.log(error)
         toast.error(error.message)  
       }
     }
  
 
-
   useEffect(()=>{
     const fetchProducts=async()=>{
     try {
       const response=await axios.get(`${backend_url}/api/user/products`);
-      console.log(response);
       if(response.data.success){
         setProducts(response.data.products);
       }
@@ -45,7 +42,6 @@ const Products = () => {
       }
       
     } catch (error) {
-      console.log(error)
       toast.error(error.message)
     }
     

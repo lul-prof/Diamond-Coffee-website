@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './Blogs.css'
 import { BlogStories } from '../../assets/assets'
 import Blog from '../../components/Blog/Blog'
@@ -10,25 +10,20 @@ import { ShopContext } from '../../context/ShopContext'
 const Blogs = () => {
     const Stories=BlogStories
     const [blogs,setBlogs]=useState([]);
-    const backend_url=import.meta.env.VITE_BACKEND_URI;
+    const {backend_url}=useContext(ShopContext);
     
-
     useEffect(()=>{
         const fetchBlogs=async()=>{
             try {
                 const response=await axios.get(`${backend_url}/api/user/blogs`);
-                console.log(response);
                 if(response.data.success){
                     setBlogs(response.data.blogs);
                     toast.success(response.data.message);
                 }else{
-                    console.log(response.data.message);
                     toast.error(response.data.message);
-                    
                 }
                 
             } catch (error) {
-                console.log(error);
                 toast.error(error);
             }
         }

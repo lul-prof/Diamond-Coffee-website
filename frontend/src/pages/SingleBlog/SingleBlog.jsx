@@ -77,6 +77,7 @@ const SingleBlog = () => {
 
     <div className="single-blog-latest">
         <h1>You Might Also Like</h1>
+        <div className="single-blog-content">
         
         {
             blogs.length>0
@@ -99,7 +100,7 @@ const SingleBlog = () => {
             :
             <></>
         }
-        <hr />
+        </div>
     </div>       
         </>
     }

@@ -108,6 +108,15 @@ hr{
 }
 
 @media (max-width:840px) and ((min-width:100px)) {
+.single-product-details{
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+.single-product-details .single-product-image img{
+    border-radius: 10px;
+}
   .bestseller-product{
     max-width: 100%;
     display:grid ;

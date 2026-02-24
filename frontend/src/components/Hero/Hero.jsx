@@ -32,16 +32,6 @@ const Hero = () => {
 
             </div>
             
-
-            <div className="hero-buttons">
-                <div className="hero-back">
-                    <img src={assets.BackIcon} alt="" />
-                </div>
-                
-                <div className="hero-next">
-                    <img src={assets.NextIcon} alt="" />
-                </div>
-            </div>
             
         </div>
     </div>

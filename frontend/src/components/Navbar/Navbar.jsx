@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { assets } from '../../assets/assets.js'
 import './Navbar.css'
 import SideMenu from '../SideMenu/SideMenu.jsx'
 import { Link, useNavigate } from 'react-router-dom';
 import Register from '../../pages/Register/Register.jsx';
 import toast from 'react-hot-toast';
+import { ShopContext } from '../../context/ShopContext.jsx';
 
 
 
 
 const Navbar = () => {
+  const {getCartCount}=useContext(ShopContext);
   const navigate=useNavigate();
   const [clicked,setClicked]=useState(false);
   const scrollToSection = (id) => {
@@ -46,9 +48,9 @@ const Navbar = () => {
             <div className="user-hover" id='user-hover'>
               <nav>
               <ul>
-                <li>Dashboard</li>
-                <li>My Chats</li>
-                <li>My orders</li>
+                <li onClick={()=>toast.error("feature under development")}>Dashboard</li>
+                <li onClick={()=>toast.error("feature under development")}>My Chats</li>
+               <Link to='/orders'><li>My orders</li></Link> 
                 {
                   !token
                   ?
@@ -63,10 +65,13 @@ const Navbar = () => {
 
           <div className="nav-cart-icon">
           <Link to='/cart'><img src={assets.CartIcon} alt="" /></Link>
+          <div style={{display:getCartCount()===0?"none":"block"}} className="cart-count">
+            <p>{getCartCount()}</p>
+          </div>
           </div>
 
           <div className="nav-side-menu" id='nav-side-menu'>
-            <img onClick={()=>(document.getElementById("nav-sidemenu").style.display="flex")} src={assets.MenuIcon} alt="" />
+            <img onClick={()=>(document.getElementById("nav-sidemenu").style.display="block")} src={assets.MenuIcon} alt="" />
             <div className="nav-sidemenu" id='nav-sidemenu'>
                     <nav>
                         <ul>
@@ -80,7 +85,7 @@ const Navbar = () => {
                             <hr />
                             <li onClick={() => scrollToSection("testimonials") || navigate('/')}>Testimonials</li>
                             <hr />
-                            <li onClick={() => navigate('/contacts')}>Contact Us</li>
+                            <li onClick={() => navigate('/contact')}>Contact Us</li>
                             <hr />
                             <img onClick={()=>(document.getElementById("nav-sidemenu").style.display="none")} src={assets.CloseIcon} alt="" />
                         </ul>

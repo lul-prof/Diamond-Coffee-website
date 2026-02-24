@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./SingleProduct.css";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import Product from "../../components/Product/Product";
 import toast from "react-hot-toast";
 import axios from "axios";
+import { ShopContext } from "../../context/ShopContext";
 
 const SingleProduct = () => {
   const { _id } = useParams();
@@ -11,6 +12,8 @@ const SingleProduct = () => {
   const [products, setProducts] = useState([]);
   const [image, setImage] = useState([]);
   const url = import.meta.env.VITE_BACKEND_URI;
+
+  const {addToCart}=useContext(ShopContext);
 
   const [token, setToken] = useState("");
   const navigate = useNavigate();
@@ -53,6 +56,7 @@ const SingleProduct = () => {
         console.log(error);
         toast.error(error);
       }
+      
     };
 
     fetchProduct();
@@ -100,13 +104,16 @@ const SingleProduct = () => {
             <h1>{product.title}</h1>
           </div>
           <div className="single-product-details-detail">
-            <input type="number" name="" id="" />
-            <button className="cart" onClick={()=>(!token?registerRedirect():toast.success("Added to cart"))}>Add to cart</button>
-            <button className="buy" onClick={()=>(!token?registerRedirect():toast.success("Added to cart")&&navigate('/checkout'))}>Buy Now</button>
+            <button className="cart" onClick={()=>(!token?registerRedirect():addToCart(_id))}>Add to cart</button>
+            <button className="buy" onClick={()=>(!token?registerRedirect():addToCart(_id) &&navigate('/cart'))}>Buy Now</button>
           </div>
           <div className="single-product-description">
             <h1>Description</h1>
             <p>{product.description}</p>
+          </div>
+          <div className="single-product-description">
+            <h1>Price</h1>
+            <p>kes {product.price}</p>
           </div>
         </div>
       </div>

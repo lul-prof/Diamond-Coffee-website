@@ -7,8 +7,8 @@ const userRouter=express.Router();
 
 userRouter.post('/register',registerUser);
 userRouter.post('/login',loginUser);
-userRouter.post('/testimonial',addTestimonial);
-userRouter.post('/complain',addComplain);
+userRouter.post('/testimonial',authUser,addTestimonial);
+userRouter.post('/complain',authUser,addComplain);
 userRouter.post('/subscribe',addSubscriber);
 userRouter.get('/blogs',fetchBlogs);
 userRouter.get('/blog/:_id',fetchBlog);

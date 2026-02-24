@@ -1,9 +1,32 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './Cart.css'
 import { Link } from 'react-router-dom'
-import { assets, CartData } from '../../assets/assets'
+import { assets} from '../../assets/assets'
+import { ShopContext } from '../../context/ShopContext'
 
 const Cart = () => {
+  const {currency,products,updateQuantity,setCartItems,cartItems,addToCart,delivery_fee,getCartAmount}=useContext(ShopContext);
+  const [cartData,setCartData]=useState([]);
+
+  useEffect(()=>{
+    if(products.length>0 && Object.keys(cartItems).length>0){
+      const tempData=[];
+
+      for (const productId in cartItems){
+        if(cartItems[productId]>0){
+          tempData.push({
+            _id:productId,
+            quantity:cartItems[productId],
+          });
+        }
+      }
+      setCartData(tempData);
+      console.log(tempData);
+    }
+
+      
+    
+  },[cartItems,products])
   return (
     <>
     <div className="cart-container">
@@ -34,20 +57,26 @@ const Cart = () => {
       </div>
       <hr/>
 
+      
+
       {/*Cart Center*/}
       {
-        CartData.map((item,index)=>(
+
+        cartData.map((item,index)=>{
+          const product=products.find((product)=>product._id===item._id);
+          
+          return(
           <>
           <div key={index} className="cart-center">
             <div className="cart-center-left">
               <div className="cart-center-left-left">
-                <img src={item.image} alt="" />
+                <img src={product.images[0]} alt="" />
               </div>
               <div className="cart-center-left-right">
-                <p>{item.name}</p>
-                <p>CBD Delivery~100</p>
-                <p>kes {item.price}</p>
-                <button>remove</button>
+                <p>{product.title}</p>
+                <p>CBD Delivery~{delivery_fee}</p>
+                <p>{currency} {product.price}</p>
+                <button onClick={()=>updateQuantity(item._id,0)}>remove</button>
               </div>
 
             </div>
@@ -57,21 +86,21 @@ const Cart = () => {
 
               <div className="cart-center-right-left">
                 <div className="cart-center-add">
-                <img src={assets.PlusIcon} alt="" />
+                <img onClick={()=>addToCart(item._id)} src={assets.PlusIcon} alt="" />
               </div>
 
               <div className="cart-center-quantity">
-                <p>5</p>
+                <p>{item.quantity}</p>
               </div>
 
               <div className="cart-center-reduce">
-                <img src={assets.MinusIcon} alt="" />
+                <img onClick={()=>updateQuantity(item._id,(item.quantity-1))} src={assets.MinusIcon} alt="" />
               </div>
               
               </div>
 
               <div className="cart-center-right-right">
-                <p>kes {item.price}</p>
+                <p>kes {product.price * item.quantity + delivery_fee}</p>
               </div>
               
             </div>
@@ -80,26 +109,27 @@ const Cart = () => {
           </div>
           <hr />
           </>
-         
-          
-        ))
+          ) 
+      })
       }
 
      
 
       <div className="cart-footer">
         <div className="cart-left">
-          <button>Clear Cart</button>
+          <button onClick={()=>(setCartItems({}) && setCartData([]))}>Clear Cart</button>
         </div>
         <div className="cart-right">
-          <h1>TOTAL: KES 1300</h1>
+          <h1>kes {getCartAmount()}</h1>
          <Link to='/checkout'><button>Checkout</button></Link> 
         </div>
       </div>
 
 
     </div>
+    
     </>
+    
   )
 }
 

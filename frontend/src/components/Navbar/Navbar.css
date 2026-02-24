@@ -60,6 +60,10 @@
   list-style: none;
   color: white;
 }
+.user-hover a{
+  text-decoration: none;
+  color: white;
+}
 
 .user-hover nav ul li {
   margin: 20px 0px;
@@ -67,11 +71,13 @@
 .nav-sidemenu {
   background-color: #6f4e37;
   display: none;
-  max-width: fit-content;
+  width: 200px;
   padding: 30px;
-  position: fixed;
-  right: calc(40% - 120px);
+  height: 50vh;
+  position: absolute;
+  right: 1px;
   z-index: -1;
+  margin-top: 17px;
   border-radius: 5px;
 }
 
@@ -97,6 +103,20 @@
   cursor: pointer;
   transform: rotate(360deg);
   transition: 1s ease;
+}
+
+.cart-count{
+  background-color: red;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  color: white;
+  border-radius: 50%;
+  position: relative;
+  bottom: 30%;
+}
+.cart-count p{
+  justify-self: center;
 }
 
 @media (max-width: 1024px) {

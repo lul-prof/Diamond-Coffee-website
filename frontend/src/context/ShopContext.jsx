@@ -33,7 +33,6 @@ const ShopContextProvider = (props) => {
         );
         toast.success("Item added to cart Successfully.");
       } catch (error) {
-        console.log(error);
         toast(error.message);
       }
     }
@@ -52,7 +51,6 @@ const ShopContextProvider = (props) => {
           totalCount += cartItems[productId];
         }
       } catch (error) {
-        console.log(error);
         toast(error.message);
       }
     }
@@ -61,7 +59,7 @@ const ShopContextProvider = (props) => {
 
   useEffect(() => {}, [cartItems]);
 
-  const updateQUantity = async (productId, quantity) => {
+  const updateQuantity = async (productId, quantity) => {
     let cartData = structuredClone(cartItems);
 
     cartData[productId] = quantity;
@@ -74,7 +72,6 @@ const ShopContextProvider = (props) => {
           { headers: { token } },
         );
       } catch (error) {
-        console.log(error);
         toast(error.message);
       }
     }
@@ -82,20 +79,13 @@ const ShopContextProvider = (props) => {
 
   const getCartAmount = () => {
     let totalAmount = 0;
-    for (const items in cartItems) {
-      let itemInfo = products.find((product) => product._id === items);
-      for (const item in cartItems[items]) {
-        try {
-          if (cartItems[items][item] > 0) {
-            totalAmount += itemInfo.price * cartItems[items][item];
-          }
-        } catch (error) {
-          console.log(error);
-          toast(error.message);
-        }
+    for(const productId in cartItems){
+      const itemInfo=products.find((product)=>product._id===productId);
+      if(itemInfo && cartItems[productId]>0){
+        totalAmount+=itemInfo.price * cartItems[productId];
       }
     }
-    return totalAmount;
+    return totalAmount+delivery_fee;
   };
 
   const myCart = async (token) => {
@@ -109,7 +99,6 @@ const ShopContextProvider = (props) => {
         setCartItems(response.data.cartData);
       }
     } catch (error) {
-      console.log(error);
       toast(error.message);
     }
   };
@@ -123,31 +112,28 @@ const ShopContextProvider = (props) => {
         toast.error(response.data.message);
       }
     } catch (error) {
-      console.log(error);
       toast(error.message);
     }
   };
 
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
     productsData();
   }, []);
 
+  useEffect(()=>{
+    if(token){
+      myCart(token)
+    }
+  },[token]);
+
   useEffect(() => {
-    const getToken = async () => {
-      try {
-        if (!token && localStorage.getItem("token")) {
-          setToken(localStorage.getItem("token"));
-        } else {
-          toast.error("Authorization failed");
-        }
-      } catch (error) {
-        console.log(error);
-        toast.error(error);
+    if(!token){
+      const storedToken=localStorage.getItem("token");
+      if(storedToken){
+        setToken(storedToken);
       }
-    };
-    getToken();
-  }, [token]);
+    }
+  }, []);
 
   const value = {
     currency,
@@ -162,10 +148,11 @@ const ShopContextProvider = (props) => {
     cartItems,
     setCartItems,
     getCartCount,
-    updateQUantity,
+    updateQuantity,
     getCartAmount,
     myCart,
     products,
+    
   };
 
   return (

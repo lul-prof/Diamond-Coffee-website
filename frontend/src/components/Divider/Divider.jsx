@@ -17,7 +17,7 @@ const Divider = () => {
     <div className="divider-container" id='about'>
         <p onClick={()=>setPage(1)} style={{textDecoration:page===1 ? "underline" :""}}>History</p>
         <p onClick={()=>setPage(2)} style={{textDecoration:page===2 ? "underline" :""}}>Warehousing</p>
-        <p onClick={()=>setPage(3)} style={{textDecoration:page===3 ? "underline" :""}}>Quality Assurance</p>
+        <p onClick={()=>setPage(3)} style={{textDecoration:page===3 ? "underline" :""}}>Quality</p>
         <p onClick={()=>setPage(4)} style={{textDecoration:page===4 ? "underline" :""}}>Export</p>
         <p onClick={()=>setPage(5)} style={{textDecoration:page===5 ? "underline" :""}}>Responsibility</p>
     </div>

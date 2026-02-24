@@ -9,8 +9,11 @@
 }
 .product-container .product-image{
     max-width: 100%;
+    
 }
-
+.product-container .product-image img{
+    height: 200px;
+}
 .product-container .product-btn button{
     width: 100%;
     padding: 5px 90px;

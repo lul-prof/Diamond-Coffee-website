@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { assets } from "../../assets/assets";
 import "./Register.css";
 import axios from "axios";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import { ShopContext } from "../../context/ShopContext";
 
 const Register = () => {
-  const backend_url = import.meta.env.VITE_BACKEND_URI;
+  const {backend_url}=useContext(ShopContext);  
   const [register, setRegister] = useState(true);
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
@@ -28,7 +29,6 @@ const Register = () => {
             `${backend_url}/api/user/register`,
             { username, email, phone, category, county, password: password1 },
           );
-          console.log(response);
           if (response.data.success) {
             setToken(response.data.token);
             localStorage.setItem("token", response.data.token);
@@ -45,7 +45,6 @@ const Register = () => {
           username,
           password,
         });
-        console.log(response);
         if (response.data.success) {
           setToken(response.data.token);
           localStorage.setItem("token", response.data.token);
@@ -56,9 +55,20 @@ const Register = () => {
         }
       }
     } catch (error) {
-      console.log(error);
+      toast.error(error);
     }
   };
+
+  const savedToken=localStorage.getItem("token");
+
+  const existsRedirect=()=>{
+    try {
+      navigate('/');
+      toast.success('Already Logged In');
+    } catch (error) {
+      toast.error(error);
+    }
+  }
 
   useEffect(() => {
     if (token) {
@@ -68,7 +78,12 @@ const Register = () => {
 
   return (
     <>
-      <div className="register-container">
+      {
+        savedToken 
+        ?
+        existsRedirect()
+        :
+        <div className="register-container">
         <div className="register-form-header">
           <h1>Create Account</h1>
         </div>
@@ -184,6 +199,7 @@ const Register = () => {
           </form>
         </div>
       </div>
+      }
     </>
   );
 };

@@ -346,7 +346,8 @@ const HomePage = () => {
                 setTestimonials(false),
                 setComplains(false),
                 setChat(false),
-                setLogout(!logout)
+                setLogout(!logout),
+                toast.success('Logged out Successfully')
               )}
             >
               Logout

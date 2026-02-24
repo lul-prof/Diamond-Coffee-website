@@ -1,6 +1,5 @@
 .divider-container{
     background-color: #6F4E37;
-    margin:10px 0px ;
     width: 99%;
     display: flex;
     justify-content: center;
@@ -10,8 +9,7 @@
     padding: 15px;
     justify-self:center ;
     justify-items: center;
-    z-index: 1;
-    position: relative;
+    margin-top: 0px;
 }
 .divider-container p{
     cursor: pointer;
@@ -77,129 +75,39 @@
         opacity: 1;
     }
 }
+ 
 
-
-@media (max-width:940px) and (min-width:529px) {
+@media (max-width:1143px) and (min-width:560px) {
 .divider-container{
-    margin-top: calc(-29% - 10px);
-    gap: 1rem;
-    font-weight: 700;
-    font-size: 15px;
-}
-.default-container{
-    display: flex;
-    justify-content: space-evenly;
-    gap: 3rem;
-    margin: 0px 20px;
-}
-.default-container .pravin-container{
-    display: flex;
-    max-width: 700px;
-    border: 0.5px solid burlywood;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.default-container .pravin-container p{
-    font-size: 20px;
-}
-
-.default-container .pravin-container .pravin-text-container{
-    margin-right: 10px;
-}
-
-.default-container .pravin-container img{
-    animation: FadeAway 3s ease;
-    border-radius: 10px;
-}
-.default-container .paras-container{
-    display: flex;
-    max-width: 700px;
-    border: 0.5px solid burlywood;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.default-container .paras-container p{
-    font-size: 20px;
-
-}
-.default-container .paras-container .paras-text-container{
-    margin-right: 10px;
-}
-
-.default-container .paras-container img{
-    border-radius: 20px;
-    animation: FadeAway 3s ease;
-}    
-}
-
-
-
-@media (max-width:528px) and (min-width:100px) {
-.divider-container{
-    margin-top: calc(-33% - 60px);
+    background-color: #6F4E37;
     width: 99%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    color: #fff;
+    font-weight: 700;
+    padding: 11px;
+    justify-self:center ;
+    justify-items: center;
+    margin-top: calc(-13% - 95px);
+
+}  
+}
+
+@media (max-width:559px) and (min-width:100px) {
+.divider-container{
+    background-color: #6F4E37;
+    width: 99%;
+    display: flex;
+    justify-content: center;
     gap: 0.5rem;
-    font-weight: 400;
-    padding: 15px;
-    font-size: 10px;
-}
-.default-container{
-    display: flex;
-    justify-content: space-evenly;
-    gap: 3rem;
-    margin: 0px 20px;
-}
-.default-container .pravin-container{
-    display: flex;
-    max-width: 700px;
-    border: 0.5px solid burlywood;
-    padding: 20px;
-    border-radius: 10px;
-}
+    color: #fff;
+    font-weight: 300;
+    padding:5px;
+    justify-self:center ;
+    font-size: 12px;
+    justify-items: center;
+    margin-top: calc(-25% - 95px);
 
-.default-container .pravin-container p{
-    font-size: 20px;
+}  
 }
-
-.default-container .pravin-container .pravin-text-container{
-    margin-right: 10px;
-}
-
-.default-container .pravin-container img{
-    animation: FadeAway 3s ease;
-    border-radius: 10px;
-}
-.default-container .paras-container{
-    display: flex;
-    max-width: 700px;
-    border: 0.5px solid burlywood;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.default-container .paras-container p{
-    font-size: 20px;
-
-}
-.default-container .paras-container .paras-text-container{
-    margin-right: 10px;
-}
-
-.default-container .paras-container img{
-    border-radius: 20px;
-    animation: FadeAway 3s ease;
-}    
-}
-
-/*
---Shades of brown
-#A0522D
-#80461B
-#6F4E37 -coffee
-#7B3F00
-
---cream
-	#FFFDD0
-*/

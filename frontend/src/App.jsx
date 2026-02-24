@@ -19,6 +19,7 @@ import Cart from './pages/Cart/Cart'
 import Checkout from './pages/Checkout/Checkout'
 import Review from './pages/Review/Review'
 import OrdersPage from './pages/Orders/OrdersPage'
+import ComplainPage from './pages/Complain/ComplainPage'
 
 let DefaultIcon = L.icon({
     iconUrl: icon,
@@ -46,6 +47,7 @@ function App() {
       <Route path='/checkout' element={<Checkout/>}  />
       <Route path='/review' element={<Review/>}/>
       <Route path='/orders' element={<OrdersPage/>}/>
+      <Route path='/complain' element={<ComplainPage/>} />
     </Routes>
     <Footer/>
     </BrowserRouter>
